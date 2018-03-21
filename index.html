@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+  <title>Validación de tarjeta de crédito </title>
+</head>
+<body class="black">
+  <h1 class="white-text center-align">Compra segura</h1>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <form id="forms">
+          <div class="form-group">
+            <label for="name">Ingresa tu nombre</label>
+            <div class="row">
+              <input id="name" class="col s10 white" name="name" placeholder="Ingresa tu nombre y apellido" pattern="[A-Za-z]{1,30}[\s ][A-Za-z]{1,30}"  title="name"  required  maxlength="50"/>
+              <span class="validity col s1 white-text"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cn">Número de tarjeta</label>
+            <div class="row">
+              <input class="col s10 white" id="cn" name="cn"  required  placeholder="0000-0000-0000-0000" maxlength="16" pattern="[0-9]{16}" />
+              <span class="col s1 white-text validity"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exp">Fecha de vencimiento</label>
+            <div class="row">
+              <input class="col s7 white" id="month" type="month" name="month" min="2018-02"  required>
+              <span class="col s1 white-text validity"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <div class="row">
+              <input class="col s3 white" id="cvv" name="cvv"  required  placeholder="CVV" maxlength="3" pattern="[0-9]{3}" />
+              <span class="validity col s1 white-text"></span>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light submit" type="submit" name="action" value="Pagar">Pagar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

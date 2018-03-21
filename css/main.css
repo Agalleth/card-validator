@@ -1,0 +1,17 @@
+/* Estilos para validación */
+input:invalid {
+  background-color: #fff;
+  border-color: red;
+}
+input:invalid + span:after {
+  color: red;
+  content: '✖';
+  position: absolute;
+  padding-left: 5px;
+}
+input:valid + span:after {
+  color: lightgreen;
+  content: '✓';
+  position: absolute;
+  padding-left: 5px;
+}
